@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 75px;
+    height: 100%;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Sidebar */
+.sidebar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px; 
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px; 
+    height: 30px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effect */
+.sidebar button:hover {
+    transform: scale(1.2); /* Slightly smaller scaling */
+    box-shadow: 0 0 10px #49d8cc; /* Reduced glow effect */
+}
+
+/* Optional icon hover effect */
+.sidebar button img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.sidebar button:hover img {
+    filter: brightness(1.5); /* Brighten the icon */
+}
+
+/* Optional hover animation using keyframes */
+.sidebar button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: rgba(73, 216, 204, 0.5); /* Semi-transparent effect */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar button:hover::before {
+    opacity: 1;
+    animation: pulse 1.5s infinite; /* Glowing pulse effect */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.main-content {
+    margin-left: 90px;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.welcome-message {
+    margin-bottom: 30px;
+}
+
+.tasks {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.tasks h2 {
+    margin-bottom: 20px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-item:last-child {
+    margin-bottom: 0;
+}
+
+.task-item img {
+    max-width: 10%;
+    height: auto;
+}
+
+.coding-hours {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.right-sidebar {
+    width: 250px;
+    background-color: #1f1f1f;
+    padding: 20px;
+}
+.right-sidebar img{
+    max-width: 25%;
+    height: auto;
+    margin-left: 40%;
+}
+
+.progress {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.progress h2 {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #555;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar-inner {
+    height: 20px;
+    width: 82%; 
+    background-color: #4a90e2;
+}
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 10vh; 
+    width: 40vw; 
+}
+
+#codingHoursChart {
+    width: 100%;
+    height: 100%;
+}

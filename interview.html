@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft : Video Chat Portal</title>
+    <link rel="stylesheet" href="interview.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <button onclick="location.href='profile-index.html'"><img src="profile-image.svg"></img></button></li>
+                <button onclick="location.href='main-index.html'"><img src="CODE.svg"></button></li>
+                <button onclick="location.href='test.html'"><img src="BOOK.svg"></button>
+                <button onclick="location.href='progress-index.html'"><img src="TICK.svg"></button></li>
+                <button onclick="location.href='interview.html'"><img src="PEOPLE.svg"></button></li>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <button onclick="location.href='settings-index.html'"><img src="GEAR.svg"></button></li>
+                <button onclick="location.href='login-index.html'"><img src="LOGOUT.svg"></button></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="welcome-banner">
+                <h1>Hello, Coder!</h1>
+                <p>Ready to connect and collaborate? Schedule your next video chat below.</p>
+            </div>
+
+            <div class="video-chat-scheduler">
+                <h2>Schedule a Video Chat</h2>
+                <label for="chat-date"><img src="calendar-icon.svg" alt="Date Icon"> Select Date:</label>
+                <input type="date" id="chat-date" name="chat-date">
+                <label for="chat-time"><img src="clock-icon.svg" alt="Time Icon"> Select Time:</label>
+                <input type="time" id="chat-time" name="chat-time">
+                <button onclick="scheduleChat()">Schedule Chat</button>
+            </div>
+
+            <div class="video-chat-info">
+                <h2>Upcoming Chat</h2>
+                <p id="scheduled-info">No chat scheduled yet.</p>
+                <button id="start-chat-button" onclick="startVideoChat()" disabled>Start Video Chat</button>
+            </div>
+        </main>
+
+        <!-- Right Sidebar with Feedback Summary and Additional Sections -->
+        <aside class="right-sidebar">
+            <!-- Feedback Summary Section -->
+            <div class="feedback-summary">
+                <h2>Feedback & Ratings</h2>
+                <div class="feedback-item">
+                    <p><strong>Interviewer:</strong> John Doe</p>
+                    <p><strong>Rating:</strong> ⭐⭐⭐⭐</p>
+                    <p>"Excellent problem-solving skills and communication."</p>
+                </div>
+                <div class="feedback-item">
+                    <p><strong>Interviewer:</strong> Jane Smith</p>
+                    <p><strong>Rating:</strong> ⭐⭐⭐⭐☆</p>
+                    <p>"Good understanding of algorithms. Could improve speed."</p>
+                </div>
+                <!-- Add more feedback items as needed -->
+            </div>
+
+            <!-- Tips and Upcoming Events Section -->
+            <div class="tips-section">
+                <h2>Tips for a Successful Chat</h2>
+                <ul>
+                    <li>Ensure a quiet environment.</li>
+                    <li>Use headphones for better audio quality.</li>
+                    <li>Test your mic and camera beforehand.</li>
+                </ul>
+            </div>
+            <div class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <p>🎉 Hackathon: InnovateX - Oct 30</p>
+                <p>📢 Webinar: AI in Code - Nov 5</p>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        // Schedule Video Chat Functionality
+        function scheduleChat() {
+            const date = document.getElementById('chat-date').value;
+            const time = document.getElementById('chat-time').value;
+            const scheduledInfo = document.getElementById('scheduled-info');
+            const startChatButton = document.getElementById('start-chat-button');
+
+            if (date && time) {
+                scheduledInfo.textContent = `Scheduled Chat on ${date} at ${time}`;
+                startChatButton.disabled = false;
+                alert('Your chat has been scheduled!');
+            } else {
+                alert('Please select both date and time.');
+            }
+        }
+
+        // Start Video Chat Functionality (Mock function to simulate video chat)
+        function startVideoChat() {
+            alert('Starting video chat...');
+            // Add actual video chat integration here, like Zoom, Jitsi, or custom WebRTC
+        }
+    </script>
+</body>
+</html>

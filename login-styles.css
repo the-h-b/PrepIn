@@ -1,0 +1,117 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tagline {
+    font-weight: bold;
+    font-family: Georgia, serif;
+    font-size: 2em;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+.left-side {
+    background: #1b1b1b;
+    color: white;
+    text-align: center;
+}
+
+.left-side img {
+    max-width: 35%;
+    height: auto;
+}
+
+.right-side {
+    background: #000000;
+    position: relative;
+}
+.right-side .header {
+    text-align: right;
+    color: #fff;
+    margin: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: Georgia, serif;
+}
+
+.login-form {
+    background-color: #000000;
+    padding: 40px; 
+    border-radius: 8px;
+    width: 320px;
+    margin: 50px auto;
+}
+
+.login-form h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: left; 
+    font-family: sans-serif;
+}
+
+.login-form label {
+    color: #ffffff;
+    font-size: 14px; 
+    margin-bottom: 8px; 
+    display: block; 
+    
+    font-family: Georgia, serif;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 20px; 
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222; 
+    color: #ffffff; 
+    font-size: 16px; 
+}
+
+.login-form button {
+    width: 100%; 
+    padding: 12px; 
+    margin-top: 10px; 
+    border: none;
+    border-radius: 4px; 
+    background-color: #555; 
+    color: #ffffff; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.login-form button:hover {
+    background-color: #777; 
+}
+
+.login-form a {
+    color: #aaaaaa; 
+    text-decoration: none; 
+    font-size: 14px; 
+    display: block; 
+    text-align: center; 
+    margin-top: 20px; 
+    text-align: left; 
+}
+
+.login-form a:hover {
+    text-decoration: underline; 
+}

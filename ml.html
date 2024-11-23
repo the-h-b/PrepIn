@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Dataset Hub</title>
+    <link rel="stylesheet" href="ml-styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>ML Dataset Hub</h1>
+        <p>Discover and share datasets for machine learning projects</p>
+    </header>
+
+    <div class="nav-tabs">
+        <button class="tab-button" onclick="switchSection('upload')">Upload Dataset</button>
+        <button class="tab-button active" onclick="switchSection('explore')">Explore Datasets</button>
+    </div>
+
+    <!-- Upload Section -->
+    <div id="upload" class="section hidden">
+        <div class="section-content">
+            <h2>Upload Your Dataset</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="datasetName">Dataset Name:</label>
+                <input type="text" id="datasetName" name="datasetName" required placeholder="Enter dataset name">
+                
+                <label for="datasetDescription">Description:</label>
+                <textarea id="datasetDescription" name="datasetDescription" rows="4" required placeholder="Provide a short description"></textarea>
+                
+                <label for="fileUpload">Upload File:</label>
+                <input type="file" id="fileUpload" name="fileUpload" accept=".csv, .xlsx, .json" required>
+                
+                <button type="button" onclick="uploadDataset()">Upload Dataset</button>
+            </form>
+            <div id="uploadMessage"></div>
+        </div>
+    </div>
+
+    <!-- Explore Section -->
+    <div id="explore" class="section">
+        <div class="section-content">
+            <h2>Explore Available Datasets</h2>
+            <div class="dataset-grid" id="datasetList">
+                <!-- Datasets will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="ml-scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeCraft : Settings Page</title>
+<link rel="stylesheet" href="settings-styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <button onclick="location.href='profile-index.html'"><img src="profile-image.svg"></img></button>
+    <button onclick="location.href='main-index.html'"><img src="CODE.svg"></button>
+    <button onclick="location.href='progress-index.html'"><img src="BOOK.svg"></button>
+    <button onclick="location.href='coding-index.html'"><img src="TICK.svg"></button>
+    <button onclick="location.href='progress-index.html'"><img src="PEOPLE.svg"></button>
+    <br><br><br><br><br><br><br><br><br><br>
+    <button onclick="location.href='settings-index.html'"><img src="GEAR.svg"></button>
+    <button onclick="location.href='login-index.html'"><img src="LOGOUT.svg"></button>
+  </div>
+  
+  <div class="main-content">
+    <div class="profile-settings">
+      <h2>Profile settings</h2>
+      <div class="profile-picture">
+        <img src="profile-image.svg" alt="  Profile Placeholder">
+        <button id="remove-picture">Remove picture</button>
+      </div>
+      <form id="profile-form">
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" placeholder="Your full name">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your email address">
+        
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="Your current city">
+        
+        <label for="bio">Bio</label>
+        <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+        
+        <button type="submit">Save changes</button>
+      </form>
+    </div>
+    <div class="account-settings">
+      <h2>Account settings</h2>
+      <form id="account-form">
+        <label for="old-password">Old password</label>
+        <input type="password" id="old-password">
+        
+        <label for="new-password">New password</label>
+        <input type="password" id="new-password">
+        
+        <label for="confirm-password">Confirm new password</label>
+        <input type="password" id="confirm-password">
+        
+        <button type="submit">Change password</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="settings-script.js"></script>
+</body>
+</html>

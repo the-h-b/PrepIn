@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Tests & Quizzes</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <button onclick="location.href='profile-index.html'"><img src="profile-image.svg"></img></button>
+        <button onclick="location.href='main-index.html'"><img src="CODE.svg"></button>
+        <button onclick="location.href='test.html'"><img src="BOOK.svg"></button>
+        <button onclick="location.href='progress-index.html'"><img src="TICK.svg"></button>
+        <button onclick="location.href='interview.html'"><img src="PEOPLE.svg"></button>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <button onclick="location.href='settings-index.html'"><img src="GEAR.svg"></button>
+        <button onclick="location.href='login-index.html'"><img src="LOGOUT.svg"></button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="welcome-banner">
+            <h1>Weekend Tests & Quizzes</h1>
+            <p>Take the challenge! Practice coding, aptitude, and English grammar skills.</p>
+            <p id="timer" class="timer">Time Left: 2:00:00</p>
+        </div>
+
+        <div class="previous-scores">
+            <h2>Previous Scores</h2>
+            <ul id="score-list"></ul>
+        </div>
+
+        <div class="category-selection">
+            <button class="category-button" onclick="startTest('coding')">Coding Test</button>
+            <button class="category-button" onclick="startTest('aptitude')">Aptitude Test</button>
+            <button class="category-button" onclick="startTest('english')">English Grammar Test</button>
+        </div>
+
+        <div class="quiz-container" id="quiz-container" style="display: none;">
+            <h2 id="quiz-title">Test Title</h2>
+            <div id="question-card" class="question-card">
+                <h3 id="question-text">Question will appear here...</h3>
+                <div id="options-container" class="options-container"></div>
+            </div>
+            <div class="quiz-footer">
+                <button id="next-button" class="next-button" onclick="nextQuestion()">Next</button>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>

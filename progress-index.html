@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>CodeCraft : Progress</title>
+    <link rel="stylesheet" href="progress-styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <button onclick="location.href='profile-index.html'"><img src="profile-image.svg"></img></button></li>
+                <br><li><button onclick="location.href='main-index.html'"><img src="CODE.svg"></button></li>
+                <br><li><button onclick="location.href='test.html'"><img src="BOOK.svg"></button></li>
+                <br><li><button onclick="location.href='progress-index.html'"><img src="TICK.svg"></button></li>
+                <br><li><button onclick="location.href='interview.html'"><img src="PEOPLE.svg"></button></li>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <li><button onclick="location.href='settings-index.html'"><img src="GEAR.svg"></button></li>
+                <li><button onclick="location.href='login-index.html'"><img src="LOGOUT.svg"></button></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for coding topics, exercises, and resources">
+                <button id="codingbtn()">Back to Learning</button>
+            </div>
+            <div class="welcome-message">
+                <h1>Hello Coder, UserID</h1>
+                <p>Explore your progress and growth in coding knowledge</p>
+            </div>
+            <div class="tasks">
+                <h2>My tasks</h2>
+                <div class="task-item">
+                    <img src="profile-image.svg" alt="User Avatar">UserID
+                    <div>
+                        <p>Code Review - Challenge #123</p>
+                        <p>Due Today</p>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <img src="profile-image.svg" alt="User Avatar">UserID
+                    <div>
+                        <p>Code review - Challenge #122</p>
+                        <p>Due Today</p>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <button>See all tasks</button>
+                </div>
+            </div>
+            <div class="coding-hours">
+                <h2>Total coding hours</h2>
+                <canvas id="codingHoursChart"></canvas>
+            </div>
+        </main>
+        <aside class="right-sidebar">
+            <div class="recent-progress">
+                <h2>Recent Progress</h2>
+                <br>
+                <div class="progress-item">
+                    <p>Code Submitted!</p>
+                    <p>Challenge #123</p>
+                    <img src="profile-image.svg" alt="User Avatar">
+                </div>
+                <br><br><br>
+                <div class="progress-item">
+                    <p>Code Submitted!</p>
+                    <p>Challenge #122</p>
+                    <img src="profile-image.svg" alt="User Avatar">
+                </div>
+            </div>
+            <br><br><br>
+            <div class="progress">
+                <h2>Your daily progress</h2>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner"></div>
+                </div>
+                <p>82%</p>
+            </div>
+            <br><br><br>
+            <div class="faq">
+                <h2>Frequently Asked Questions</h2>
+                <textarea id="faq" placeholder="Ask your Question Here!"></textarea>
+            </div>
+        </aside>
+    </div>
+    <script>
+        const ctx = document.getElementById('codingHoursChart').getContext('2d');
+        const codingHoursChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Coding Hours',
+                    data: [2, 3, 4, 5, 2, 3, 4],
+                    backgroundColor: 'rgba(74, 144, 226, 0.5)',
+                    borderColor: 'rgba(34,34,34,1.00)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

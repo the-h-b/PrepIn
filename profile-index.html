@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeBlock : Profile Page</title>
+<link rel="stylesheet" href="profile-styles.css">
+</head>
+<body>
+<div class="sidebar">
+  <button onclick="location.href='profile-index.html'"><img src="profile-image.svg"></img></button>
+  <button onclick="location.href='main-index.html'"><img src="CODE.svg"></button>
+  <button onclick="location.href='test.html'"><img src="BOOK.svg"></button>
+  <button onclick="location.href='progress-index.html'"><img src="TICK.svg"></button>
+  <button onclick="location.href='interview.html'"><img src="PEOPLE.svg"></button>
+  <br><br><br><br><br><br><br><br><br><br>
+  <button onclick="location.href='settings-index.html'"><img src="GEAR.svg"></button>
+  <button onclick="location.href='login-index.html'"><img src="LOGOUT.svg"></button>
+</div>
+
+<div class="main-content">
+    <div class="profile-section">
+      <div class="profile-header">
+        <div class="profile-photo"><img src = 'profile-image.svg'></img></div>
+        <div class="profile-info">
+          <h1>User Name</h1>
+          <p>Location</p>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-value">1807</span>
+              <span class="stat-name">Bio Rating</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">2</span>
+              <span class="stat-name">Followers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">32</span>
+              <span class="stat-name">Following</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pinned-projects">
+        <h2>Pinned Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="project-thumbnail-1.jpg" alt="Project 1 Thumbnail">
+            <div class="project-info">
+              <h3>Project 1</h3>
+              <p>A brief description of Project 1. This could be a summary of what the project does.</p>
+              <button onclick="location.href='project-link-1.html'">View Project</button>
+            </div>
+          </div>
+      
+          <div class="project-card">
+            <img src="project-thumbnail-2.jpg" alt="Project 2 Thumbnail">
+            <div class="project-info">
+              <h3>Project 2</h3>
+              <p>A brief description of Project 2. Highlight some key aspects or technologies used in this project.</p>
+              <button onclick="location.href='project-link-2.html'">View Project</button>
+            </div>
+          </div>
+      
+          <div class="project-card">
+            <img src="project-thumbnail-3.jpg" alt="Project 3 Thumbnail">
+            <div class="project-info">
+              <h3>Project 3</h3>
+              <p>A brief description of Project 3. Mention why this project is notable or interesting.</p>
+              <button onclick="location.href='project-link-3.html'">View Project</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h2>Statistics</h2>
+    <div class="total-statistics">
+        <div class="stat-item"><img src = 'TICK.svg'></img>
+          <div class="stat-details">
+            <span class="stat-count">341</span>
+            <span class="stat-label">Correct Answers</span>
+          </div>
+        </div>
+        <div class="stat-item"><img src = 'TIME.svg'></img>
+          <div class="stat-details">
+            <span class="stat-count">56</span>
+            <span class="stat-label">Hours Learned</span>
+          </div>
+        </div>
+        <div class="stat-item"><img src = 'leaderboard.svg'></img>
+          <div class="stat-details">
+            <span class="stat-count">23</span>
+            <span class="stat-label">Achievements</span>
+          </div>
+        </div>
+      </div>
+      <h2>Daily Submissions</h2>
+        <div id="calendar"></div>
+
+      <h2>Achievements</h2>
+      <div class="achievements">
+        <ul>
+            <li><div class="achievement-item"><img src = 'book.svg'></img>
+                <div class="achievement-details">
+                <span class="achievement-label">Committed Learner</span>
+                <span class="achievement-count">3/3</span>
+                </div>
+                </div>
+            </li>
+            <br>
+            <li><div class="achievement-item"><img src = 'leaderboard.svg'></img>
+                <div class="achievement-details">
+                <span class="achievement-label">Point Collector</span>
+                <span class="achievement-count">1699/1800</span>
+                </div>
+                </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+  <div class="friends-section">
+    <div class="friend-suggestions">
+      <h2>Friend Suggestions</h2>
+      <div class="suggestion-item"><img src = profile-image.svg> </img>UserID<button>✓</button> <button>✕</button></div>
+      <div class="suggestion-item"><img src = profile-image.svg> </img>UserID <button>✓</button> <button>✕</button></div>
+      <button>View all</button>
+    </div>
+    <div class="friends-list">
+      <h2>Friends</h2>
+      <div class="friend-item"><img src = profile-image.svg> </img>UserID <button>Profile</button></div>
+      <div class="friend-item"><img src = profile-image.svg> </img>UserID <button>Profile</button></div>
+      <button>View all</button>
+    </div>
+    <button onclick="findUser()">Find Friends</button>
+    <button onclick="inviteUser()">Invite Friends</button>
+  </div>
+</div>
+
+<script src="profile-script.js"></script>
+</body>
+</html>
